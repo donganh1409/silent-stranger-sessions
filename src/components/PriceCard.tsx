@@ -1,4 +1,3 @@
-
 import { ReactNode } from 'react';
 
 interface PriceCardProps {
@@ -24,19 +23,25 @@ const PriceCard = ({
 
   return (
     <div 
-       className={`rounded-2xl p-6 card-shadow appear flex-shrink-0 w-[288px] h-[236px] ${color}`} 
+      className={`rounded-2xl p-6 card-shadow appear flex-shrink-0 w-[288px] h-[236px] ${color}`} 
       style={delayStyle}
     >
-      {icon && (
-        <div className="flex justify-center mb-4">
-          <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white/50 text-primary">
-            {icon}
+      <div className="flex flex-col justify-between h-full">
+        {icon && (
+          <div className="flex justify-center mb-4">
+            <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white/50 text-primary">
+              {icon}
+            </div>
           </div>
+        )}
+        <div className="text-center">
+          <h3 className="text-xl font-semibold mb-2">{title}</h3>
+          <p className="text-lg font-bold text-primary mb-2 leading-tight min-h-[48px] whitespace-pre-line">
+            {price}
+          </p>
+          <p className="text-gray-600">{description}</p>
         </div>
-      )}
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p className="text-2xl font-bold text-primary mb-2">{price}</p>
-      <p className="text-gray-600">{description}</p>
+      </div>
     </div>
   );
 };
