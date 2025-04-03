@@ -7,18 +7,21 @@ const steps = [
     title: "Book a time",
     description: "Select a convenient time slot via Calendly",
     icon: CalendarIcon,
+    color: "bg-blue-100 text-blue-600"
   },
   {
     id: 2,
     title: "Connect online",
     description: "Join via Zalo or Google Meet for your session",
     icon: Video,
+    color: "bg-purple-100 text-purple-600"
   },
   {
     id: 3,
     title: "Get started affordably",
     description: "Enjoy 50% off your first session",
     icon: PercentIcon,
+    color: "bg-green-100 text-green-600"
   }
 ];
 
@@ -35,12 +38,14 @@ const HowItWorks = () => {
           {steps.map((step, index) => (
             <div key={step.id} className="appear" style={{ animationDelay: `${index * 200}ms` }}>
               <div className="flex flex-col items-center text-center">
-                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary text-white mb-4">
+                <div className={`flex items-center justify-center w-16 h-16 rounded-full ${step.color} mb-4 shadow-md transition-transform hover:scale-105`}>
                   {<step.icon className="w-8 h-8" />}
                 </div>
-                <span className="text-sm font-medium text-primary mb-1">Step {step.id}</span>
-                <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
+                <div className="bg-white p-4 rounded-lg shadow-sm w-full">
+                  <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium mb-2">Step {step.id}</span>
+                  <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+                  <p className="text-gray-600">{step.description}</p>
+                </div>
               </div>
             </div>
           ))}
