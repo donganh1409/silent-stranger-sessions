@@ -24,7 +24,7 @@ const PriceCard = ({
 
   return (
     <div 
-      className={`rounded-2xl p-6 card-shadow appear flex-shrink-0 w-full md:w-72 ${color}`} 
+       className={`rounded-2xl p-6 card-shadow appear flex-shrink-0 w-[288px] h-[236px] ${color}`} 
       style={delayStyle}
     >
       {icon && (
