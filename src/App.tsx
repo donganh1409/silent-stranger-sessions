@@ -16,10 +16,10 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/coming-soon" element={<ComingSoon />} /> {/* ✅ New Route */}
-            <Route path="*" element={<NotFound />} />
-        </Routes>
+  <Route path="/" element={<ComingSoon />} /> {/* Coming Soon = Homepage */}
+  <Route path="/product" element={<Index />} /> {/* MVP stays available at /product */}
+  <Route path="*" element={<NotFound />} />
+</Routes>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
