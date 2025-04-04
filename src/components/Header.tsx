@@ -17,10 +17,15 @@ const Header = () => {
         <p className="text-xl sm:text-2xl mb-8 text-gray-600">
           A place where you are heard — without judgment.
         </p>
-        <Button className="text-lg px-8 py-6 rounded-full bg-primary hover:bg-primary/90">
-          <CalendarIcon className="mr-2 h-5 w-5" />
-          Book a Session Now
-        </Button>
+        <a
+          href="https://calendly.com/donganh1409a/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+      className="inline-flex items-center justify-center text-lg px-8 py-6 rounded-full bg-primary hover:bg-primary/90 text-white font-semibold transition"
+>
+  <CalendarIcon className="mr-2 h-5 w-5" />
+  Start your 30-min release now
+</a>
       </div>
     </header>
   );

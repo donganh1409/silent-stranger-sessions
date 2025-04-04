@@ -7,6 +7,7 @@ import InfoCard from "@/components/InfoCard";
 import Testimonial from "@/components/Testimonial";
 import PriceCard from "@/components/PriceCard";
 import HowItWorks from "@/components/HowItWorks";
+import FaqAccordion from "@/components/FaqAccordion";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 
@@ -99,9 +100,14 @@ const Index = () => {
                 No pressure, no judgment, no advice unless requested. 
                 Book easily via Calendly.
               </p>
-              <Button className="bg-primary hover:bg-primary/90 rounded-full px-6 py-2">
-                Book a Session Now
-              </Button>
+              <a
+  href="https://calendly.com/donganh1409a/30min"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-block bg-primary hover:bg-primary/90 text-white font-semibold px-6 py-2 rounded-full transition"
+>
+  Talk to someone who won't judge 
+</a>
             </InfoCard>
           </section>
           
@@ -173,6 +179,7 @@ const Index = () => {
               ))}
             </div>
           </section>
+      <FaqAccordion />
         </div>
       </main>
       
